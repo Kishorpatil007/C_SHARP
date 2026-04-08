@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 
-static class Demo
+sealed class Demo
 {
-    public static int a = 10;
-
-    public static void Show()
+    public void Show()
     {
-        Console.WriteLine(a);
+        Console.WriteLine("Sealed class method");
     }
 }
 
@@ -14,6 +12,7 @@ class Program
 {
     static void Main()
     {
-        Demo.Show();
+        Demo d = new Demo();
+        d.Show();
     }
 }
